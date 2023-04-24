@@ -1,11 +1,16 @@
 @echo off
 title Windows Compactor
 
+cd /d %~dp0
+
 net session >nul 2>&1
 if not %errorLevel% EQU 0 echo "Administrator privileges required!" && pause && exit
 
 set /p _disk=Enter drive letter:
 set /p _defrg=Defragment drive? [Ny]:
+
+echo "Scanning for system problems!"
+sfc /scannow
 
 echo "Removing hyberfile.sys!"
 powercfg -h off
@@ -21,7 +26,7 @@ del C:\Windows\prefetch\*.*/s/q
 Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
 
 echo "Running debloater!"
-powershell -Command "& {.\debloater\Windows10SysPrepDebloater.ps1 -Sysprep -Debloat -Privacy}"
+PowerShell.exe -command ".\debloater\Windows10SysPrepDebloater.ps1 -Sysprep -Debloat -Privacy"
 
 echo "Disabling some services!"
 regsvr32.exe /u hnetmon.dll
@@ -40,17 +45,15 @@ pause
 echo "Compacting OS!"
 Compact.exe /CompactOS:always
 
-echo "Defragmenting drive %_disk%:\!"
-if /i "%_defrg%" == "y" defrag %_disk%: /o
-
-echo "Scanning for system problems!"
-sfc /scannow
+if /i "%_defrg%" == "y" echo "Defragmenting drive %_disk%:\!" && defrag %_disk%: /o
 
 echo "This are the remaining programs:"
 wmic product get name
 
 echo "Opening optimizer!"
-.\optimizer\optimizer.exe
+start .\optimizer\optimizer.exe
+
+WiseRegistryCleaner.exe -a -safe
 
 echo "All done!"
 pause
