@@ -2,7 +2,7 @@
 title Windows Compactor
 
 net session >nul 2>&1
-if not %errorLevel% EQU 0 echo "Administrator privileges required!" && exit
+if not %errorLevel% EQU 0 echo "Administrator privileges required!" && pause && exit
 
 set /p _disk=Enter drive letter:
 set /p _defrg=Defragment drive? [Ny]:
