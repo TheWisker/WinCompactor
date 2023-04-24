@@ -21,8 +21,9 @@ wmic pagefileset where 'name="%_disk%:\pagefile.sys"' delete
 echo "Doing some cleaning!"
 cleanmgr /sagerun
 del %temp%\*.* /s /q
+del %_disk%:\Windows\SoftwareDistribution\Download\*.* /s /q
 cleanmgr /verylowdisk /d
-del C:\Windows\prefetch\*.*/s/q
+del %_disk%:\Windows\prefetch\*.*/s/q
 Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
 
 echo "Running debloater!"
@@ -38,7 +39,7 @@ echo "Flushing DNS cache!"
 ipconfig /flushdns
 
 echo "Following packages should be removed:"
-powershell -Command "& {Get-AppXProvisionedPackage -Online | Select PackageName}"
+PowerShell.exe -command "Get-AppXProvisionedPackage -Online | Select PackageName"
 echo "Remove by running: Remove-AppXProvisionedPackage -Online -PackageName {package-name}"
 pause
 
