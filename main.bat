@@ -21,7 +21,7 @@ del C:\Windows\prefetch\*.*/s/q
 Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
 
 echo "Running debloater!"
-powershell -Command "& {.debloater\Windows10SysPrepDebloater.ps1 -Sysprep -Debloat -Privacy}"
+powershell -Command "& {.\debloater\Windows10SysPrepDebloater.ps1 -Sysprep -Debloat -Privacy}"
 
 echo "Disabling some services!"
 regsvr32.exe /u hnetmon.dll
@@ -50,7 +50,7 @@ echo "This are the remaining programs:"
 wmic product get name
 
 echo "Opening optimizer!"
-optimizer/optimizer.exe
+.\optimizer\optimizer.exe
 
 echo "All done!"
 pause
