@@ -22,7 +22,7 @@ WARNING: I do NOT take responsibility for what may happen to your system! Run sc
 
 ![Size screenshot](./assets/Screenshot_One.png)
 
-![Behaviour settings screenshot](./assets/Screenshot_Two.png)
+![Nautilus screenshot](./assets/Screenshot_Two.png)
 
 <h2 align="center">Usage</h2>
 
