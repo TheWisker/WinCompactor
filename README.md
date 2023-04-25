@@ -16,7 +16,7 @@ The resulting operating system is intentended to only be capable of running prog
 
 <h2 align="center">Disclaimer</h2>
 
-WARNING: I do NOT take responsibility for what may happen to your system! Run scripts at your own risk! Also, other variants of this repo are not technically "new" versions of this, but they are different in their own respective ways. There are some sites saying that other projects are "new" versions of this, but that is inaccurate.
+WARNING: I do NOT take responsibility for what may happen to your system! Run scripts at your own risk!
 
 <h2 align="center">Screenshots</h2>
 
