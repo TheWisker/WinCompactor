@@ -1,6 +1,6 @@
 <h1 align="center">WinCompactor</h1>
 <div align="center">
-    <img width="400" src="./assets/logo.png">
+    <img width="225" src="./assets/logo.png">
 </div>
 <p align="center">Windows 10 Compacting Script</p>
 
