@@ -1,6 +1,0 @@
-[submodule "debloater"]
-	path = debloater
-	url = https://github.com/Sycnex/Windows10Debloater
-[submodule "optimizer"]
-	path = optimizer
-	url = https://github.com/hellzerg/optimizer
