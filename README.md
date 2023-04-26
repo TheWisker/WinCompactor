@@ -6,11 +6,11 @@
 
 <h2 align="center">Description</h2>
 
-<p align="center">This is a batch script that reduces Windows 10's size as much as posible!</p>
+<p align="center">This is a batch script that reduces Windows 10's size as much as possible!</p>
 
 <h2 align="center">Details</h2>
 
-Keep in mind that this script removes some Windows 10 features you way not want to remove.
+Keep in mind that this script removes some Windows 10 features you may not want to remove.
 The resulting operating system size measured should be around 10GB for Windows 10 Home.
 The resulting operating system is intentended to only be capable of running programs.
 
@@ -27,7 +27,7 @@ WARNING: I do NOT take responsibility for what may happen to your system! Run sc
 <h2 align="center">Usage</h2>
 
 Download this repo and extract the contents. Navigate to the repository root.
-Run the main.bat file, input the system disk and if it should be defragmented.
+Run the main.bat file, input the system drive letter and if it should be defragmented.
 
 <h2 align="center">Author</h2>
 <div align="center">
